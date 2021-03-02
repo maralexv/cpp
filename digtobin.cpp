@@ -4,26 +4,22 @@ using namespace std;
 
 int main ()
 {
-    int given, temp;
+    int given;
     vector<int> result;
     cin >> given;
 
-    while (given / 2 != 0) 
+    while (given > 0) 
     {
-      result.push_back(given % 2);
-      cout << "remainder " << given % 2 << " -> vector" << endl;
-      temp = given / 2;
-      cout << "factor " << temp << endl;
-      given = temp;
+        result.push_back(given % 2);
+        given = given / 2;
     }
 
-    cout << "vector size " << result.size() << endl;
+    reverse(result.begin(), result.end());
 
-    for (int i = (result.size() - 1); i == 0; i--)
+    for (int i = 0; i < result.size(); i++)
     {
         cout << result[i];
     }
-
     cout << endl;
 
     return 0;
