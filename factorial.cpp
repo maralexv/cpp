@@ -1,18 +1,8 @@
 #include <iostream>
+
 using namespace std;
 
-int Factorial (int x)
-{
-    if (x > 0)
-    {
-        x = x * Factorial(x - 1);
-    }
-    else 
-    {
-        x = 1;
-    }
-    return x;
-}
+int Factorial(int x);
 
 int main ()
 {
@@ -20,4 +10,16 @@ int main ()
     cin >> input;
     cout << Factorial(input) << endl;
     return 0;
-} 
+}
+
+int Factorial(int x) 
+{
+  if (x > 0) 
+  {
+    x = x * Factorial(x - 1);
+  } else 
+  {
+    x = 1;
+  }
+  return x;
+}
