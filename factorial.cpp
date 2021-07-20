@@ -1,27 +1,23 @@
 #include <iostream>
 using namespace std;
 
-int factorial (int x)
+int Factorial (int x)
 {
     if (x > 0)
     {
-        x = x * factorial(x - 1);
+        x = x * Factorial(x - 1);
     }
     else 
     {
         x = 1;
     }
-    
     return x;
 }
 
 int main ()
 {
-    int input, output;
+    int input;
     cin >> input;
-
-    output = factorial (input);
-    cout << output << endl;
-
+    cout << Factorial(input) << endl;
     return 0;
 } 
