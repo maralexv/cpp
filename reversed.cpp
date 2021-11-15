@@ -19,7 +19,8 @@ int main()
 
   numbers = Reversed(numbers);
 
-  for (auto i : numbers) {
+  for (auto i : numbers) 
+  {
     cout << i << " ";
   }
   cout << endl;
